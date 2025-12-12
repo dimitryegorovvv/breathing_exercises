@@ -144,11 +144,19 @@ button {
     html {
         font-size: 13px;
     }
+    .wrapper__circle {
+        width: calc(var(--size) * 10);
+        height: calc(var(--size) * 10);
+    }
 }
 
 @media (max-width: 650px) {
     html {
         font-size: 10px;
+    }
+    .wrapper__circle {
+        width: calc(var(--size) * 12);
+        height: calc(var(--size) * 12);
     }
 }
 
