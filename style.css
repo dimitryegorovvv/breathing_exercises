@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'UnifixSPDemo';
+    src: url('fonts/UnifixSPDemo.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color_1: #0D0D0D;
+    --color_2: #F24822;
+    --color_3: #F2B6A0;
+    --color_4: #F27649;
+    --color_5: #F2E0D5;
+    --color_6: #342E59;
+    --color_7: #F2DB94;
+    --size: calc(1vh + 1vw);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat Alternates';
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color_1);
+    padding-bottom: 35vh;
+    overflow-x: hidden;
+}
+
+
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    /* padding: 1.5vh 1.5vw; */
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    border-radius: calc(var(--size) * 1);
+    font-size: 1.4rem;
+}
+
+.header {
+    margin-top: 10vh;
+    color: var(--color_7);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 80vw;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper__exercise {
+    position: relative;
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh 2vw;
+}
+
+.wrapper__exercise-1 {
+    border: calc(var(--size) / 9) solid var(--color_5);
+}
+
+.wrapper__exercise-2 {
+    margin-top: 50vh;
+    border: calc(var(--size) / 9) solid var(--color_6);
+}
+
+.wrapper__circle {
+    width: calc(var(--size) * 8);
+    height: calc(var(--size) * 8);
+    border-radius: 50%;
+}
+
+.circle-1 {
+    animation: pulse_1 10s ease-in-out 9999;
+    background-color: var(--color_2);
+}
+
+@keyframes pulse_1 {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.0); }
+  100% { transform: scale(1); }
+}
+
+.circle-2 {
+    animation: pulse_2 12s ease-in-out 9999;
+    background-color: var(--color_6);
+}
+
+@keyframes pulse_2 {
+  0% { transform: scale(1); }
+  33.333% { transform: scale(0.0); }
+  100% { transform: scale(1); }
+}
+
+.button-1 {
+    color: var(--color_1);
+    background-color: #F2B6A0;
+}
+
+.wrapper__text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 90%;
+}
+
+.text-1 {
+    color: var(--color_5);
+}
+
+.text-2 {
+    color: var(--color_7);
+}
+
+@media (max-width: 920px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    html {
+        font-size: 8px;
+    }
+}
